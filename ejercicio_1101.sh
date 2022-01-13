@@ -8,10 +8,8 @@ echo
 
 #Literal 2
 echo ¿Cuál es el tamaño del archivo Marra2014_data.fasta?
-a=`wc -l ../data/Marra2014_data.fasta | cut -d " " -f 1`
-b=`head -n 1 ../data/Marra2014_data.fasta | grep -o " " | wc -l`
-echo Número de filas= $a
-echo Número de columas= $b
+a=`ls -lh ../data/Marra2014_data.fasta | cut -d " " -f 5`
+echo El tamaño del archivo es: $a
 echo 
 
 #Literal3
@@ -38,6 +36,7 @@ echo Original: $d
 echo Reemplazando: $e
 echo  
 
+
 #Literal6
 echo ¿Cuántos isogroups únicos hay en el archivo?
 f=`cut -d "," -f 4 my_file.fasta | grep "isogroup" | uniq | wc -l`
@@ -46,5 +45,6 @@ echo
 
 #Literal7
 echo ¿Qué contig tiene el mayor número de lecturas, numreads?¿Cuántas lecturas tiene?
-cut -d "," -f 1,3 my_file.fasta| grep "numreads"
-
+g=`cut -d "," -f 1,3 my_file.fasta| grep "contig" | sort -n -t "=" -k2 | tail -n 1 | cut -d "," -f 1`
+h=`cut -d "," -f 1,3 my_file.fasta| grep "contig" | sort -n -t "=" -k2 | tail -n 1 | cut -d "," -f 2`
+echo El contig con mayor números de lecturas es $g con $h
