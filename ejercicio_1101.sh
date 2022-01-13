@@ -26,7 +26,7 @@ echo
 #Literal4
 echo ¿Cuántos contigs se clasifican como isogroup00036?
 c=`grep -w "isogroup00036" my_file.fasta | grep -c "isogroup00036"`
-echo Existen $c que se clasifican como isogroup00036
+echo Existen $c contigs que se clasifican como isogroup00036
 echo 
 
 #Literal5
@@ -36,3 +36,15 @@ sed -i 's/  /,/g' my_file.fasta
 e=`head -n 1 my_file.fasta`
 echo Original: $d
 echo Reemplazando: $e
+echo  
+
+#Literal6
+echo ¿Cuántos isogroups únicos hay en el archivo?
+f=`cut -d "," -f 4 my_file.fasta | grep "isogroup" | uniq | wc -l`
+echo Hay $f isogroups unicos en el archivo
+echo 
+
+#Literal7
+echo ¿Qué contig tiene el mayor número de lecturas, numreads?¿Cuántas lecturas tiene?
+cut -d "," -f 1,3 my_file.fasta| grep "numreads"
+
