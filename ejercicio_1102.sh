@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#Dirección de la data
 cd ../
 cd CSB-master/unix/data/
 
