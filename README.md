@@ -10,6 +10,8 @@
 
 **Número de cédula:** 0605499896
 
+**Ciudad de residencia:** Riobamba
+
 -*Características del computador*
 
 **Nombre del dispositivo:**	DESKTOP-R2T2AHA
