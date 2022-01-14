@@ -4,7 +4,7 @@
 echo Cambiar de directorio to CSB/unix/sandbox
 cd ../CSB-master/unix/sandbox/
 pwd
-echo  
+echo 
 
 #Literal 2
 echo ¿Cuál es el tamaño del archivo Marra2014_data.fasta?
@@ -34,7 +34,7 @@ sed -i 's/  /,/g' my_file.fasta
 e=`head -n 1 my_file.fasta`
 echo Original: $d
 echo Reemplazando: $e
-echo  
+echo 
 
 
 #Literal6
@@ -48,3 +48,4 @@ echo ¿Qué contig tiene el mayor número de lecturas, numreads?¿Cuántas lectu
 g=`cut -d "," -f 1,3 my_file.fasta| grep "contig" | sort -n -t "=" -k2 | tail -n 1 | cut -d "," -f 1`
 h=`cut -d "," -f 1,3 my_file.fasta| grep "contig" | sort -n -t "=" -k2 | tail -n 1 | cut -d "," -f 2`
 echo El contig con mayor números de lecturas es $g con $h
+
